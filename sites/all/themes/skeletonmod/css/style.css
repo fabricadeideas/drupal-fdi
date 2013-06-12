@@ -1,0 +1,42 @@
+/* #Base 960 Grid 
+================================================== */
+body { margin: 0; padding: 0; }
+img { height: auto; max-width: 100%; outline: 0 none; }
+
+#wrap {}
+
+header {}
+
+nav {}
+
+#content {}
+
+aside {}
+
+#featured {}
+	#featured #left {}
+	#featured #right {}
+
+footer {}
+	footer #first {}
+	footer #second {}
+	footer #third {}
+
+/* #Tablet (Portrait)
+================================================== */   
+    /* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+/*  #Mobile (Portrait) 
+================================================== */
+    /* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+
+}
+/* #Mobile (Landscape)
+================================================== */
+    /* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
