@@ -10,9 +10,9 @@
                 <?php endif; ?>
                 
                 <?php if ($site_name): ?>
-                <h1<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
+                <div<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
-                </h1>
+                </div>
                 <?php endif; ?>
                 
                 <?php if ($site_slogan): ?>
