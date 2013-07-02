@@ -108,25 +108,25 @@
         <footer class="sixteen columns clearfix">
         
             <?php if ($page['footer_first']): ?>
-                <div class="one_third">
+                <div id="first" class="one_third">
                     <?php print render($page['footer_first']); ?>
                 </div>
             <?php endif; ?>
             
             <?php if ($page['footer_second']): ?>
-                <div id="first" class="one_third">
+                <div id="second" class="one_third">
                     <?php print render($page['footer_second']); ?>
                 </div>
             <?php endif; ?>
             
             <?php if ($page['footer_third']): ?>
-                <div id="second" class="one_third last">
+                <div id="third" class="one_third last">
                     <?php print render($page['footer_third']); ?>
             </div>
             <?php endif; ?>
             
             <?php if ($page['footer']): ?> 
-                <div id="third" class="clear"></div>
+                <div class="clear"></div>
                 <?php print render($page['footer']);?> 
             <?php endif; ?>
             
