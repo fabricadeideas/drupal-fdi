@@ -95,33 +95,14 @@
     </div>
   <?php endif; ?>
 
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
 
-    ?>
+	<?php
+	  // We hide the comments and links now so that we can render them later.
+	  hide($content['comments']);
+	  hide($content['links']);
+	  print render($content);
+	?>
 
-    <?php
-      $fields = field_info_instances('node', $node->type);
-      foreach ($fields as $field) {
-        $field_name = $field['field_name'];
-        $field_values = field_get_items('node', $node, $field_name);
-        if (!empty($field_values)):
-          ?><div class="<?php print preg_replace('/field_/', '', $field_name); ?>"><?php
-          if (count($field_values) > 1):
-            foreach ($field_values as $field_value) {
-              $output = field_view_value('node', $node, $field_name, $field_value);
-              ?><div><?php print render ($output); ?></div><?php
-            }
-          else:
-              $output = field_view_value('node', $node, $field_name, $field_values[0]);
-              print render ($output);
-          endif;
-          ?></div><?php
-        endif;
-      }
-    ?>
 
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
