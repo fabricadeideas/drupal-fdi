@@ -1,5 +1,17 @@
 <?php
 /**
+ * NO RENDERIZAR LA AYUDA EN LOS COMENTARIOS
+ */
+function skeletonmod_form_comment_form_alter(&$form, &$form_state, &$form_id) {
+  $form['comment_body']['#after_build'][] = 'configure_comment_form';
+}
+
+function configure_comment_form(&$form) {
+  unset($form[LANGUAGE_NONE][0]['format']);
+  return $form;
+}
+
+/**
  * Implements hook_html_head_alter().
  * This will overwrite the default meta character type tag with HTML5 version.
  */
